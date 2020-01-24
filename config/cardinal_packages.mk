@@ -23,6 +23,13 @@ PRODUCT_PACKAGES += \
     AudioFX
 endif
 
+# Charger mode images
+ifeq ($(TARGET_INCLUDE_PIXEL_CHARGER),true)
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+endif
+
 # Config
 PRODUCT_PACKAGES += \
     SimpleDeviceConfig
