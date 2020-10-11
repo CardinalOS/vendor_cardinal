@@ -7,6 +7,7 @@
 PRODUCT_BRAND ?= CardinalOS
 
 # CardinalOS makefiles
+$(call inherit-product, vendor/cardinal/config/cardinal_boot.mk)
 $(call inherit-product, vendor/cardinal/config/cardinal_packages.mk)
 $(call inherit-product, vendor/cardinal/config/cardinal_properties.mk)
 $(call inherit-product, vendor/cardinal/config/cardinal_version.mk)
@@ -67,12 +68,6 @@ ifneq ($(TARGET_DISABLE_EPPE),true)
 # Require all requested packages to exist
 $(call enforce-product-packages-exist-internal,$(wildcard device/*/$(CARDINAL_BUILD)/$(TARGET_PRODUCT).mk),product_manifest.xml rild Calendar Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
 endif
-
-# Bootanimation
-TARGET_SCREEN_WIDTH ?= 1080
-TARGET_SCREEN_HEIGHT ?= 1920
-PRODUCT_PACKAGES += \
-    bootanimation.zip
 
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
