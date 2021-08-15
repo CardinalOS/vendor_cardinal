@@ -5,3 +5,5 @@ echo "=========================================="
 echo "       CardinalOS Build Environment        "
 echo "=========================================="
 echo "AOSP Revision: $AOSP_REVISION"
+
+export SKIP_ABI_CHECKS="true"
