@@ -22,3 +22,5 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
     org.cardinal.device=$(CARDINAL_BUILD) \
     org.cardinal.version=$(CARDINAL_ANDROID)
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    org.aosp.revision=$(AOSP_REVISION)
