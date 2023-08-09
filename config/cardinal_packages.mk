@@ -31,10 +31,6 @@ PRODUCT_PACKAGES += \
     product_charger_res_images_vendor
 endif
 
-# Config
-PRODUCT_PACKAGES += \
-    SimpleDeviceConfig
-
 # Extra tools in Cardinal
 PRODUCT_PACKAGES += \
     bash \
