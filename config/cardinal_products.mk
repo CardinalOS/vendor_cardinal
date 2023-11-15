@@ -72,6 +72,23 @@ ifneq ($(TARGET_DISABLE_EPPE),true)
 $(call enforce-product-packages-exist-internal,$(wildcard device/*/$(CARDINAL_BUILD)/$(TARGET_PRODUCT).mk),product_manifest.xml rild Calendar Launcher3 Launcher3Go Launcher3QuickStep Launcher3QuickStepGo android.hidl.memory@1.0-impl.vendor vndk_apex_snapshot_package)
 endif
 
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED ?= $(TARGET_SUPPORTS_64_BIT_APPS)
+
+PRODUCT_PACKAGES += \
+    FaceUnlockOverlay
+
+ifeq ($(TARGET_FACE_UNLOCK_SUPPORTED),true)
+PRODUCT_PACKAGES += \
+    ParanoidSense
+
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.face.sense_service=$(TARGET_FACE_UNLOCK_SUPPORTED)
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.biometrics.face.xml
+endif
+
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
