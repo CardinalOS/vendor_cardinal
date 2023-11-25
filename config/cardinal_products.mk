@@ -11,6 +11,7 @@ $(call inherit-product, vendor/cardinal/config/cardinal_boot.mk)
 $(call inherit-product, vendor/cardinal/config/cardinal_fonts.mk)
 $(call inherit-product, vendor/cardinal/config/cardinal_packages.mk)
 $(call inherit-product, vendor/cardinal/config/cardinal_properties.mk)
+$(call inherit-product, vendor/cardinal/config/cardinal_sounds.mk)
 $(call inherit-product, vendor/cardinal/config/cardinal_version.mk)
 
 # Allow vendor/extra to override any property by setting it first
