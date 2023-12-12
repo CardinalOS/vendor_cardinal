@@ -1,0 +1,24 @@
+#
+# Copyright (C) 2023 CardinalOS
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+CARDINAL_ANDROID := 14.0
+CARDINAL_CODENAME := Unity
+CARDINAL_BUILD_DATE := $(shell date +"%d%m%Y-%H%M")
+
+ifndef CARDINAL_BUILD_TYPE
+	CARDINAL_BUILD_TYPE := REL
+endif
+
+CARDINAL_VERSION := CDL.$(CARDINAL_CODENAME).$(CARDINAL_ANDROID)-$(CARDINAL_BUILD)-$(CARDINAL_BUILD_DATE)-$(CARDINAL_BUILD_TYPE)
+CARDINAL_BUILD_VERSION := CDL.$(CARDINAL_CODENAME).$(CARDINAL_ANDROID)-$(CARDINAL_BUILD_DATE)-$(CARDINAL_BUILD_TYPE)
+
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
+    org.cardinal.build.date=$(CARDINAL_BUILD_DATE) \
+    org.cardinal.build.version=$(CARDINAL_BUILD_VERSION) \
+    org.cardinal.codename=$(CARDINAL_CODENAME) \
+    org.cardinal.device=$(CARDINAL_BUILD) \
+    org.cardinal.version=$(CARDINAL_ANDROID)
+
