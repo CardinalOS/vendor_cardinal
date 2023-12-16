@@ -8,7 +8,6 @@ PRODUCT_BRAND ?= CardinalOS
 
 # CardinalOS makefiles
 $(call inherit-product, vendor/cardinal/config/cardinal_boot.mk)
-$(call inherit-product, vendor/cardinal/config/cardinal_fonts.mk)
 $(call inherit-product, vendor/cardinal/config/cardinal_keepers.mk)
 $(call inherit-product, vendor/cardinal/config/cardinal_packages.mk)
 $(call inherit-product, vendor/cardinal/config/cardinal_properties.mk)
