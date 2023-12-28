@@ -11,7 +11,8 @@ PRODUCT_PACKAGES += \
 # Apps
 PRODUCT_PACKAGES += \
     messaging \
-    Stk
+    Stk \
+    ThemePicker
 
 ifneq ($(PRODUCT_NO_CAMERA),true)
 PRODUCT_PACKAGES += \
