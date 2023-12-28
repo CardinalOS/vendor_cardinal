@@ -10,6 +10,7 @@ PRODUCT_PACKAGES += \
 
 # Apps
 PRODUCT_PACKAGES += \
+    Launcher3QuickStep \
     messaging \
     Stk \
     ThemePicker
