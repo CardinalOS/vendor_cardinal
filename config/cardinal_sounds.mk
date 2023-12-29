@@ -12,9 +12,3 @@ PRODUCT_COPY_FILES += \
 # Source: https://material.io/design/sound/sound-resources.html
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/cardinal/sounds/material/,$(TARGET_COPY_OUT_PRODUCT)/media/audio)
-
-# Set default sounds
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.config.alarm_alert=Bright_morning.ogg \
-    ro.config.notification_sound=End_note.ogg \
-    ro.config.ringtone=The_big_adventure.ogg

@@ -67,8 +67,8 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
     system/%/libntfs-3g.so
 
 # GAPPS
-WITH_GMS := true
-$(call inherit-product, vendor/gms/products/gms.mk)
+$(call inherit-product, vendor/google/gms/config.mk)
+$(call inherit-product, vendor/google/pixel/config.mk)
 
 # Openssh
 PRODUCT_PACKAGES += \
